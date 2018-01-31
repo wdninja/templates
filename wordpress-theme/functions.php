@@ -2,8 +2,8 @@
 
 //Enqueue Stylesheets
 function wp_theme_styles() {
-    wp_enqueue_style( 'googlefonts_css', 'https://fonts.googleapis.com/css?family=Montserrat:400,400i,700|PT+Serif:400,400i' );
-    wp_enqueue_style( 'slick_css', get_template_directory_uri() . '/js/vendor/slick/slick.css' );
+    //wp_enqueue_style( 'googlefonts_css', '' );
+    //wp_enqueue_style( 'slick_css', get_template_directory_uri() . '/js/vendor/slick/slick.css' );
     wp_enqueue_style( 'main_css', get_template_directory_uri() . '/main.css' );
 }
 add_action( 'wp_enqueue_scripts', 'wp_theme_styles' );
@@ -11,9 +11,9 @@ add_action( 'wp_enqueue_scripts', 'wp_theme_styles' );
 //Enqueue Scripts
 function wp_theme_js() {
 	wp_enqueue_script( 'modernizr_js', get_template_directory_uri() . '/js/libs/modernizr-2.8.3-custom.js', '', '', false );
-    wp_enqueue_script( 'slick_js', get_template_directory_uri() . '/js/vendor/slick/slick.min.js', '', '', true );
-    wp_enqueue_script( 'parallax_js', get_template_directory_uri() . '/js/vendor/parallax.min.js', '', '', true );
-    wp_enqueue_script( 'aniview_js', 'https://unpkg.com/jquery-aniview/dist/jquery.aniview.js', '', '', true );
+    //wp_enqueue_script( 'slick_js', get_template_directory_uri() . '/js/vendor/slick/slick.min.js', '', '', true );
+    //wp_enqueue_script( 'parallax_js', get_template_directory_uri() . '/js/vendor/parallax.min.js', '', '', true );
+    //wp_enqueue_script( 'aniview_js', 'https://unpkg.com/jquery-aniview/dist/jquery.aniview.js', '', '', true );
 	wp_enqueue_script( 'script_js', get_template_directory_uri() . '/js/script.js', array('jquery'), '', false );
 }
 add_action( 'wp_enqueue_scripts', 'wp_theme_js' );
@@ -49,11 +49,11 @@ add_theme_support('post-thumbnails');
 //Login Logo
 function my_login_logo() { ?>
     <style type="text/css">
-        body.login {
+        /* body.login {
             background: #131212;
         }
         #login h1 a, .login h1 a {
-            background-image: url('<?php echo get_stylesheet_directory_uri(); ?>/images/dragon.svg');
+            background-image: url('<?php echo get_stylesheet_directory_uri(); ?>/images/logo.svg');
             background-size: 76px 85px;
             padding-bottom: 16px;
             width: 76px;
@@ -87,7 +87,7 @@ function my_login_logo() { ?>
         .login #nav a:hover,
         .login #backtoblog a:hover {
             color: #DF0000!important;
-        }
+        } */
     </style>
 <?php }
 add_action( 'login_enqueue_scripts', 'my_login_logo' );
